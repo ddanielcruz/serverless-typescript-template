@@ -1,0 +1,46 @@
+{
+  "name": "serverless-typescript-template",
+  "main": "serverless.ts",
+  "version": "1.0.0",
+  "private": true,
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "dev": "serverless offline --httpPort=3333 --reloadHandler --verbose",
+    "deploy": "serverless deploy --verbose",
+    "deploy:dev": "npm run deploy -- --stage dev",
+    "lint": "npx eslint --fix 'src/**' 'tests/**' --no-error-on-unmatched-pattern"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.7.0",
+    "@middy/core": "^4.2.8",
+    "@middy/do-not-wait-for-empty-event-loop": "^4.2.8",
+    "@middy/http-cors": "^4.2.8",
+    "@middy/http-json-body-parser": "^4.2.8",
+    "env-var": "^7.3.0"
+  },
+  "devDependencies": {
+    "@serverless/typescript": "^3.0.0",
+    "@types/aws-lambda": "^8.10.71",
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^5.56.0",
+    "esbuild": "^0.16.0",
+    "eslint": "^8.36.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-import-helpers": "^1.3.1",
+    "eslint-plugin-n": "^15.6.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "json-schema-to-ts": "^2.7.2",
+    "serverless": "^3.29.0",
+    "serverless-esbuild": "^1.43.0",
+    "serverless-offline": "^12.0.4",
+    "serverless-offline-sqs": "^7.3.2",
+    "serverless-prune-plugin": "^2.0.2",
+    "ts-node": "^10.4.0",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "^5.0.2"
+  }
+}
